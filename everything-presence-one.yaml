@@ -18,14 +18,34 @@ esp32:
 
 logger:
 
-api:
+#Commented out to prevent reboots as Home Assistant is no longer connected via the API
+#api:
 
 ota:
 
 wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap: {}
 
 captive_portal:
+
+# MQTT section for communication without ESPHOME API, add your MQTT broker credentials to secrets.yaml file
+# By default this will add state and command topics to MQTT for all entities as applicable
+# e.g.
+# Occupancy State Topic: 'esphome/everything-presence-one/binary_sensor/_occupancy/state'
+# mmWave LED State Topic: 'esphome/everything-presence-one/switch/mmwave_led/state'
+# mmWave LED Command Topic: 'esphome/everything-presence-one/switch/mmwave_led/command'
+#
+mqtt:
+  broker: !secret mqtt_ip
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  client_id: $name
+  topic_prefix: esphome/${name}
+  discovery: false
 
 improv_serial:
 
@@ -99,13 +119,14 @@ uart:
   tx_pin: GPIO13
   rx_pin: GPIO14
   baud_rate: 115200
-  debug:
-    direction: BOTH
-    dummy_receiver: true
-    after:
-      delimiter: "\n"
-    sequence:
-      - lambda: UARTDebug::log_string(direction, bytes);
+# Commented out UART debug to reduce MQTT messages
+#   debug:
+#    direction: BOTH
+#    dummy_receiver: true
+#    after:
+#      delimiter: "\n"
+#    sequence:
+#      - lambda: UARTDebug::log_string(direction, bytes);
 
 switch:
   - platform: safe_mode
