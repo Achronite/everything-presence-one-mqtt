@@ -84,6 +84,19 @@ The final hardware will look like this:
 
 ![Completed EP1](images/assembly-complete.jpg)
 
+We can now power on for the first time.
+{: .fs-6 .fw-300 }
+
+## Powering On
+
+You will want to grab a USB-C cable and a power brick - any charger should suffice, as power requirements are around 200 milliamps.
+
+The power brick will be used later when moving the EP1 to it's final position.
+
+Plug the USB-C cable into the EP1 and a red light will illuminate on the front of the device.
+
+![Powering on the sensor](images/connecting-wifi-power.jpg)
+
 ## Next Steps
 
 Now we have assembled the hardware, we can power on and connect it to WiFi.
