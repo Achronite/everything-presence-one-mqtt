@@ -2,14 +2,14 @@
 layout: default
 title: Flashing
 parent: Advanced Features
-nav_order: 3
+nav_order: 4
 ---
 
 # Flashing
 
 {: .no_toc }
 
-This page will help you to flash your Everything Presence One back to factory firmware!
+This page will help you to flash and update your Everything Presence One to the latest version!
 {: .fs-6 .fw-300 }
 
 {: .highlight }
@@ -19,9 +19,18 @@ Please note, the Everything Presence One comes with ESPHome pre-installed out of
 
 Here you can install the latest [ESPHome](https://esphome.io) firmware on the Everything Presence One board for direct integration with [Home Assistant](https://home-assistant.io).
 
+##The process is more DIY for the MQTT fork.
+
+## The rest of the flashing instructions below are for using stock firmware for use with Home Assistant
 Hit the connect button to install the latest ESPHome firmware on you're
 Everything Presence One board. No programming or other software
-required. After flashing has completed, you can connect the EP1 to your Wi-Fi and integrate directly with Home Assistant.
+required.
+
+{: .warning-title }
+If you do not see a "Connect" button below, use a supported web browser like Google Chrome.
+
+If you have manually flashed the MQTT-fork of EP1 firmware:
+After flashing has completed, you can connect the EP1 to your Wi-Fi and integrate with MQTT (using Achronite's MQTT fork).
 
 <input
             type="radio"
