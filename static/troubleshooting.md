@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Troubleshooting
-nav_order: 7
+nav_order: 8
 ---
 
 # FAQ
@@ -10,8 +10,8 @@ nav_order: 7
 
 
 {: .warning-title }
-Please make sure you have updated your EP1 to the latest avaliable firmware by going to [Updating](https://everythingsmarthome.github.io/everything-presence-one/flashing.html){: .btn .btn-blue }
-
+Please make sure you have updated your EP1 to the latest available (Home Assistant) firmware by going to [Flashing](https://everythingsmarthome.github.io/everything-presence-one/flashing.html){: .btn .btn-blue }
+For MQTT-based firmware, go to [MQTT Fork](https://github.com/Achronite/everything-presence-one-mqtt){: .btn .btn-blue }
 
 Lets cover off some of the commonly asked questions.
 {: .fs-6 .fw-300 }
